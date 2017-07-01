@@ -13,7 +13,7 @@ async def encoder(request):
     )
 
 @app.route("/decode", methods=['POST'])
-async def encoder(request):
+async def decoder(request):
     body = request.json['text']
     retData = base64.b64decode(body.encode('utf-8')).decode('utf-8')
     return response.json(
