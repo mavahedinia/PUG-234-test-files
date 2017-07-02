@@ -33,7 +33,7 @@ apiBenchmark.measure(service_sanic, routes, {
             runMode: 'parallel',
             maxConcurrentRequests: 10,
             delay: 0,
-            minSamples: 10,
+            minSamples: 8000,
             maxTime: 10,
             stopOnError: false
 		},
