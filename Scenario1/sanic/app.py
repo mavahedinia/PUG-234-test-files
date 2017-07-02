@@ -7,7 +7,6 @@ app = Sanic(__name__)
 @app.route("/encode", methods=['POST'])
 async def encoder(request):
     body = request.json['text']
-    print(body)
     retData = base64.b64encode(body.encode('utf-8')).decode('utf-8')
     return response.json(
         {'encoded': retData}
