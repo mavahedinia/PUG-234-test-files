@@ -89,3 +89,10 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# node files
+node_modules
+
+# mac files
+.DS_Store
+*.html
