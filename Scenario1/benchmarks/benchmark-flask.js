@@ -39,6 +39,6 @@ apiBenchmark.measure(service_sanic, routes, {
 		},
         function(err, results){
         	apiBenchmark.getHtml(results, function(error, html){
-        		fs.writeFileSync('benchmark-flask.html', html);
+        		fs.writeFileSync('output/benchmark-flask.html', html);
         	});
 });
