@@ -44,7 +44,6 @@ async def notify_mongo_started(app, loop):
 async def save(request):
     body = request.json
     ret = await mongoHandler.insert(body)
-    # print(ret.inserted_id)
     return response.json(
         {'id': str(ret.inserted_id)},
         status=201
@@ -54,7 +53,6 @@ async def save(request):
 async def fetch(request):
     body = request.json['id']
     ret = await mongoHandler.findById(body)
-    # print(ret)
     return response.json(
         {'id': str(ret['_id']), 'text': str(ret['text'])}
     )
