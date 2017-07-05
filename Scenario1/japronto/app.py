@@ -20,4 +20,4 @@ r = app.router
 r.add_route('/encode', encoder, methods=['POST'])
 r.add_route('/decode', decoder, methods=['POST'])
 
-app.run(worker_num=8, port=8080)
+app.run(port=8080)
