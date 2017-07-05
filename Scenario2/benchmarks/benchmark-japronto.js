@@ -1,7 +1,7 @@
 var apiBenchmark = require('api-benchmark');
 var fs = require('fs');
 
-var service_sanic = {
+var service_japronto = {
     japronto: "http://localhost:8080/"
 };
 
@@ -28,7 +28,7 @@ var routes = {
     }
 };
 
-apiBenchmark.measure(service_sanic, routes, {
+apiBenchmark.measure(service_japronto, routes, {
             debug: false,
             runMode: 'parallel',
             maxConcurrentRequests: 10,

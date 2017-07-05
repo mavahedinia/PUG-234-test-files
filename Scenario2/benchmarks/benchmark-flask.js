@@ -1,7 +1,7 @@
 var apiBenchmark = require('api-benchmark');
 var fs = require('fs');
 
-var service_sanic = {
+var service_flask = {
     flask: "http://localhost:8082/"
 };
 
@@ -28,7 +28,7 @@ var routes = {
     }
 };
 
-apiBenchmark.measure(service_sanic, routes, {
+apiBenchmark.measure(service_flask, routes, {
             debug: false,
             runMode: 'parallel',
             maxConcurrentRequests: 10,

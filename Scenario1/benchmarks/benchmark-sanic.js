@@ -34,7 +34,7 @@ apiBenchmark.measure(service_sanic, routes, {
             maxConcurrentRequests: 10,
             delay: 0,
             minSamples: 8000,
-            maxTime: 10,
+            maxTime: 100000,
             stopOnError: false
 		},
         function(err, results){
