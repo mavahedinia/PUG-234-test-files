@@ -13,7 +13,7 @@ class Encode(Resource):
         retData = base64.b64encode(text['text'].encode('utf-8')).decode('utf-8')
         return json.dumps({'encoded': retData})
 
-    
+
 class Decode(Resource):
 
     def render_POST(self, request):
